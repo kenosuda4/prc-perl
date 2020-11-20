@@ -7,6 +7,8 @@ my $name;
 $name = "nosuke\n";
 
 my $age = 27;
+my $rake1 = "motosu\'rake";
+my $rake2 ="\"joushi'rake\"";
 
 my $hight = 170.2;
 my $big = 123_456_789;
@@ -21,12 +23,16 @@ my $ca = $c % 3;
 
 print "私は$nameです\n";
 
+print "私がよくいく湖は${rake1}で\n";
+print "同じぐらいいく湖は${rake2}です\n";
 
 print "$age\n";
 
 print "Hello Perl\n";
 
-print "$hight \n";
+print "私の身長は" .$hight. "cmです \n"; #　※1
+print "私の身長は${hight}cmです \n"; # ※2 
+# ※1.2の出力結果は同じ
 
 print "$big \n";
 
