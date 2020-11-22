@@ -7,8 +7,11 @@ my $name;
 $name = "nosuke\n";
 
 my $age = 27;
+
+# エスケープ シングル/ダブルクォート内に同じクォートは使えないのでエスケープする
 my $rake1 = "motosu\'rake";
 my $rake2 ="\"joushi'rake\"";
+# \←を使う
 
 my $hight = 170.2;
 my $big = 123_456_789;
@@ -30,11 +33,15 @@ print "$age\n";
 
 print "Hello Perl\n";
 
-print "私の身長は" .$hight. "cmです \n"; #　※1
+# 文字列の連結は . を使う
+print "私の身長は" . $hight . "cmです \n"; #　※1
 print "私の身長は${hight}cmです \n"; # ※2 
 # ※1.2の出力結果は同じ
 
 print "$big \n";
+
+# 文字列を代入した変数の後にxを書き、その後数字を入れるとその回数表示する
+print $name x 5;
 
 print "$ab\n";
 print "$bc\n";
