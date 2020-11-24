@@ -25,8 +25,22 @@ foreach my $color (@colors){
 #     print "color = $color\n"
 # }
 
-# スカラー変数は省略可能 $_に配列の中身が自動的に代入される
+# スカラー変数は省略可能 特殊変数 $_ に配列の中身が自動的に代入される
 my @colors = qw(red blue green orange pink);
 for (@colors){
     print "color = $_\n"
+}
+
+# ハッシュのループ処理
+my %s1 = ("natu" => "Br", "tyori"=>"Fr", "kazu"=>"Fr", "nosu"=>"IM");
+
+foreach my $key (keys(%s1)){
+print "$keyのS1は$s1{$key}\n"
+}
+
+# 同じくこちらもeachを省略できる
+my %s1 = ("natu" => "Br", "tyori"=>"Fr", "kazu"=>"Fr", "nosu"=>"IM");
+
+for (keys(%s1)){
+print "$_のS1は$s1{$_}\n"
 }
